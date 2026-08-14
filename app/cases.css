@@ -1,0 +1,237 @@
+.cases {
+  overflow: hidden;
+}
+
+.cases-heading {
+  align-items: end;
+  margin-bottom: clamp(2rem, 4vw, 3.75rem);
+}
+
+.cases-heading > p {
+  max-width: 34rem;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 1.7vw, 1.5rem);
+}
+
+.case-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(9, 10, 12, .12);
+  border-radius: 1.25rem;
+  background: #090a0c;
+  box-shadow: 0 1.5rem 4rem rgba(9, 10, 12, .12);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 122, 0, .55);
+  box-shadow: 0 2rem 5rem rgba(9, 10, 12, .2);
+}
+
+.case-logo {
+  height: clamp(8rem, 11vw, 10rem);
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.case-logo-dark {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 122, 0, .18), transparent 36%),
+    #17191d;
+}
+
+.case-logo-light {
+  background:
+    linear-gradient(135deg, rgba(247, 248, 250, .96), #fff),
+    #fff;
+}
+
+.case-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 74%;
+  max-height: 3.25rem;
+  object-fit: contain;
+}
+
+.case-logo-dark img {
+  max-width: 58%;
+}
+
+.case-logo-3ck img {
+  max-height: 3.75rem;
+}
+
+.case-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.4rem, 2.2vw, 2rem);
+  color: #f7f8fa;
+}
+
+.case-eyebrow {
+  margin-bottom: .9rem;
+  color: #ff9a00;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.case-card h3 {
+  max-width: 17ch;
+  margin: 0 0 1rem;
+  color: #fff;
+  font-size: clamp(1.25rem, 1.5vw, 1.55rem);
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+
+.case-card p {
+  margin: 0 0 1.5rem;
+  color: rgba(247, 248, 250, .67);
+  font-size: .94rem;
+  line-height: 1.65;
+}
+
+.case-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-card li {
+  padding: .5rem .7rem;
+  border: 1px solid rgba(255, 176, 0, .24);
+  border-radius: 999px;
+  background: rgba(255, 122, 0, .08);
+  color: #f7f8fa;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.cases-outcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: clamp(1.25rem, 2.5vw, 2rem);
+  padding: clamp(1.25rem, 2.3vw, 1.75rem) clamp(1.25rem, 2.8vw, 2.25rem);
+  border: 1px solid rgba(9, 10, 12, .12);
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.cases-outcome > span {
+  color: #5c626c;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.cases-outcome div {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.75rem);
+}
+
+.cases-outcome strong {
+  position: relative;
+  color: #17191d;
+  font-size: clamp(.88rem, 1.1vw, 1rem);
+  white-space: nowrap;
+}
+
+.cases-outcome strong:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(clamp(.75rem, 2vw, 1.875rem) * -1);
+  width: .25rem;
+  height: .25rem;
+  border-radius: 50%;
+  background: #ff7a00;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+  .cases-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .case-card:last-child .case-card-copy {
+    min-height: 19rem;
+  }
+
+  .cases-outcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .cases-heading {
+    align-items: flex-start;
+  }
+
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-card:last-child {
+    grid-column: auto;
+  }
+
+  .case-card:last-child .case-card-copy {
+    min-height: 0;
+  }
+
+  .case-logo {
+    height: 8.25rem;
+  }
+
+  .case-card-copy {
+    padding: 1.35rem;
+  }
+
+  .case-card h3 {
+    max-width: 20ch;
+    font-size: 1.22rem;
+  }
+
+  .cases-outcome div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .85rem;
+  }
+
+  .cases-outcome strong {
+    white-space: normal;
+  }
+
+  .cases-outcome strong:not(:first-child)::before {
+    top: -.45rem;
+    left: 0;
+    width: 1.8rem;
+    height: 1px;
+    border-radius: 0;
+    transform: none;
+  }
+}

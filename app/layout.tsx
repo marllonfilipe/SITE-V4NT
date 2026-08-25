@@ -4,6 +4,9 @@ import "./globals.css";
 import "./responsive.css";
 import "./cases.css";
 import "./testimonials.css";
+import "./diagnostic.css";
+import "./linkedin.css";
+import "./ui-polish.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 

@@ -102,7 +102,7 @@ a.button:not(.button-ghost),a.button:not(.button-ghost):visited,a.button:not(.bu
 
 /* Labels finais sem numeração de rascunho */
 .gargalos .kicker,.thesis .kicker,.method .kicker,.score-section .kicker,.solutions-section .kicker,.sprint-feature .kicker,.cases .kicker,.audience .kicker,.difference .kicker,.about .kicker{font-size:0}
-.gargalos .kicker:after{content:"O SINAL"}.thesis .kicker:after{content:"A TESE VANT"}.method .kicker:after{content:"MÉTODO VANT"}.score-section .kicker:after{content:"VANT SCORE"}.solutions-section .kicker:after{content:"SOLUÇÕES"}.sprint-feature .kicker:after{content:"POR QUE SPRINTS"}.cases .kicker:after{content:"RESULTADOS"}.audience .kicker:after{content:"PARA QUEM É"}.difference .kicker:after{content:"MODELO INTEGRADO"}.about .kicker:after{content:"SOBRE A VANT"}
+.gargalos .kicker:after{content:"O SINAL"}.thesis .kicker:after{content:"A TESE VANT"}.method .kicker:after{content:"MÉTODO VANT"}.score-section .kicker:after{content:"VANT SCORE"}.solutions-section .kicker:after{content:"SOLUÇÕES"}.sprint-feature .kicker:after{content:"POR QUE SPRINTS"}.cases .kicker:after{content:"ONDE A VANT ATUA"}.audience .kicker:after{content:"PARA QUEM É"}.difference .kicker:after{content:"MODELO INTEGRADO"}.about .kicker:after{content:"SOBRE A VANT"}
 .gargalos .kicker:after,.thesis .kicker:after,.method .kicker:after,.score-section .kicker:after,.solutions-section .kicker:after,.sprint-feature .kicker:after,.cases .kicker:after,.audience .kicker:after,.difference .kicker:after,.about .kicker:after{font-size:10px;letter-spacing:.17em}
 
 /* Hero responsiva também para notebooks baixos */
@@ -281,3 +281,33 @@ h1,h2{letter-spacing:-.045em;line-height:1.04}.section-heading h2{font-size:clam
 .issue i{color:#fff;font-variant-emoji:text}
 .sprint-image{background-image:linear-gradient(90deg,rgba(9,10,12,.98),rgba(9,10,12,.83) 50%,rgba(9,10,12,.2)),url('/images/gargalos-operacao.png')}
 @media(max-width:680px){.sprint-image{background-image:linear-gradient(0deg,#090a0c 0%,transparent 38%),url('/images/gargalos-operacao.png')}}
+
+.desktop-nav a{position:relative}
+.desktop-nav a::after{position:absolute;right:0;bottom:-10px;left:0;height:2px;background:var(--orange);content:"";transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.desktop-nav a.is-active,.desktop-nav a:hover{color:#fff}
+.desktop-nav a.is-active::after{transform:scaleX(1)}
+.mobile-nav a.is-active{color:var(--orange)}
+.score-product::before{position:absolute;top:-3rem;left:0;color:var(--orange);content:"VANT SCORE  →  REVENUE SPRINT  →  VANT REVENUE SYSTEM";font-size:.65rem;font-weight:800;letter-spacing:.13em;white-space:nowrap}
+.section-heading h2{text-wrap:balance}
+.case-card:focus-within,.solution-card:focus-within,.path-card:focus-within{outline:2px solid var(--orange);outline-offset:4px}
+.mobile-sticky-cta{display:none}
+@media(max-width:1000px){.score-product::before{top:-2rem}}
+@media(max-width:680px){
+  .score-product::before{position:static;display:block;margin-bottom:1rem;line-height:1.5;white-space:normal}
+  .mobile-sticky-cta{position:fixed;right:16px;bottom:14px;left:16px;z-index:45;display:flex;min-height:52px;align-items:center;justify-content:space-between;padding:0 18px;border-radius:5px;background:linear-gradient(135deg,var(--amber),var(--flame));box-shadow:0 12px 32px rgba(9,10,12,.36);color:#090a0c;font-size:12px;font-weight:800}
+  .mobile-sticky-cta .arrow{color:#fff;font-size:18px}
+  .footer{padding-bottom:74px}
+}
+
+/* Hero: imagem ocupa toda a área sem deformar nem criar um recorte lateral */
+@media(min-width:681px){
+  .hero .hero-image{inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto;transform:none;background-size:cover;background-position:center center;background-repeat:no-repeat;opacity:1;-webkit-mask-image:none;mask-image:none}
+  .hero:after{background:linear-gradient(90deg,#090a0c 0%,rgba(9,10,12,.98) 25%,rgba(9,10,12,.72) 48%,rgba(9,10,12,.16) 72%,transparent 100%)}
+}
+
+/* Seções institucionais: imagem integral, sem deformar e dentro dos limites da seção */
+@media(min-width:681px){
+  .audience .audience-image,
+  .about .about-image{inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto;top:0;right:0;transform:none;background-size:cover;background-position:center center;background-repeat:no-repeat;opacity:1;-webkit-mask-image:none;mask-image:none}
+  .audience:after,.about:after{background:linear-gradient(90deg,#090a0c 0%,rgba(9,10,12,.98) 27%,rgba(9,10,12,.78) 48%,rgba(9,10,12,.2) 74%,transparent 100%)}
+}

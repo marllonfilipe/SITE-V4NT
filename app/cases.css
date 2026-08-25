@@ -235,3 +235,149 @@
     transform: none;
   }
 }
+
+/* Composição editorial dos cases */
+.cases-grid {
+  grid-template-columns: 1.15fr 1fr;
+  grid-template-areas: "featured demand" "featured tech";
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+
+.case-card:nth-child(1) { grid-area: featured; }
+.case-card:nth-child(2) { grid-area: demand; }
+.case-card:nth-child(3) { grid-area: tech; }
+.case-card:nth-child(1) .case-logo { height: 14rem; }
+
+.case-card {
+  position: relative;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #111316, #090a0c);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.case-card::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+}
+
+.case-logo {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 58%);
+}
+
+.case-logo::before {
+  position: absolute;
+  top: 1rem;
+  left: 1.2rem;
+  color: rgba(255, 255, 255, 0.42);
+  content: "01 / 03";
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.case-card:nth-child(2) .case-logo::before { content: "02 / 03"; }
+.case-card:nth-child(3) .case-logo::before { content: "03 / 03"; }
+
+.case-card-copy::before {
+  display: block;
+  margin-bottom: 1rem;
+  color: #777b82;
+  content: "GARGALO  ·  IMPLEMENTAÇÃO";
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.case-card:nth-child(1) .case-card-copy::before { content: "ESTRUTURAÇÃO  ·  EXECUÇÃO"; }
+.case-card:nth-child(2) .case-card-copy::before { content: "AQUISIÇÃO  ·  ACOMPANHAMENTO"; }
+.case-card:nth-child(3) .case-card-copy::before { content: "PROCESSOS  ·  TECNOLOGIA"; }
+.case-card:first-child .case-card-copy { padding: clamp(1.6rem, 3vw, 3rem); }
+
+@media (max-width: 1024px) {
+  .cases-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "featured featured" "demand tech";
+  }
+
+  .case-card:nth-child(1) .case-logo { height: 12rem; }
+}
+
+@media (max-width: 700px) {
+  .cases-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "featured" "demand" "tech";
+  }
+
+  .case-card:nth-child(1) .case-logo { height: 10rem; }
+  .case-card:hover { transform: none; }
+}
+
+/* Cases clean: contraste leve, conteúdo em primeiro plano */
+.cases {
+  background: #f5f5f2;
+}
+
+.case-card {
+  border-color: #e4e4df;
+  background: #fff;
+  box-shadow: 0 1.25rem 3rem rgba(24, 28, 31, .08);
+}
+
+.case-card:hover {
+  border-color: rgba(255, 122, 0, .42);
+  box-shadow: 0 1.5rem 3.5rem rgba(24, 28, 31, .13);
+}
+
+.case-card::after {
+  border-color: rgba(24, 28, 31, .07);
+}
+
+.case-logo,
+.case-logo-dark,
+.case-logo-light {
+  border-bottom-color: #e8e8e3;
+  background: linear-gradient(135deg, #f8f8f5, #fff);
+}
+
+.case-logo-dark img {
+  filter: invert(1);
+}
+
+.case-logo::before {
+  color: #969993;
+}
+
+.case-card-copy {
+  color: #53585d;
+}
+
+.case-card-copy::before {
+  color: #8b908b;
+}
+
+.case-card h3 {
+  color: #17191d;
+}
+
+.case-card p {
+  color: #62676b;
+}
+
+.case-card li {
+  border-color: #eed9c5;
+  background: #fff8f0;
+  color: #6a4a2c;
+}
+
+@media (max-width: 700px) {
+  .case-logo,
+  .case-logo-dark,
+  .case-logo-light {
+    background: #fff;
+  }
+}

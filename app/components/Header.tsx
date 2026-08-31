@@ -23,7 +23,7 @@ export function Header() {
   return <>
   <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
     <div className="header-inner">
-      <a className="brand" href="#inicio" aria-label="VANT - início"><img src="/images/vant-logo.png" alt="VANT" /></a>
+      <a className="brand" href="#inicio" aria-label="VANT - início"><img src="/images/vant-logo.webp" alt="VANT" decoding="async" /></a>
       <nav className="desktop-nav" aria-label="Navegação principal">{links.map(([label, href]) => <a className={activeHref === href ? "is-active" : ""} key={href} href={href}>{label}</a>)}</nav>
       <a className="button button-small header-cta" href="#diagnostico">Diagnosticar minha operação</a>
       <button className="menu-button" aria-expanded={open} aria-controls="mobile-menu" aria-label="Abrir menu" onClick={() => setOpen(!open)}><span /><span /></button>

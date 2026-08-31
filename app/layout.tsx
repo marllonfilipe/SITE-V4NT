@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "VANT | Growth Tech para operações comerciais",
   description: "Estratégia, aquisição, processo, CRM, automação e IA conectados em uma operação comercial mais previsível.",
   openGraph: { title: "VANT | Operações comerciais que funcionam", description: "Transformamos operações fragmentadas em sistemas de crescimento mais previsíveis.", type: "website", locale: "pt_BR" },
-  icons: { icon: "/images/vant-symbol.png", shortcut: "/images/vant-symbol.png" },
+  icons: { icon: "/images/vant-symbol.webp", shortcut: "/images/vant-symbol.webp" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

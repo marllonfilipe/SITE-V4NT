@@ -1,0 +1,16 @@
+{
+  "name": "VANT | Growth Tech para Operações Comerciais",
+  "short_name": "VANT",
+  "description": "Growth Tech para operações comerciais.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071014",
+  "theme_color": "#071014",
+  "icons": [
+    {
+      "src": "/images/vant-symbol.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}

@@ -41,6 +41,15 @@ export default defineConfig(async () => {
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
+  if (process.env.VANT_STATIC_EXPORT === "true") {
+    return {
+      server: isCodexSeatbeltSandbox
+        ? { watch: { useFsEvents: false, usePolling: true } }
+        : undefined,
+      plugins: [vinext(), sites()],
+    };
+  }
+
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {

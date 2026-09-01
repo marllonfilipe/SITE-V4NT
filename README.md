@@ -91,8 +91,31 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
+- `npm run build:netlify`: create the static artifact for Netlify
+- `npm run build:aws`: create the static artifact for AWS Amplify or S3
+- `npm run preview:static`: preview the static artifact locally on port `4173`
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
+
+## Hosting
+
+The public site can be deployed as a static build. Both hosting builds output
+the files to `dist/client` and do not require server credentials or a runtime
+API.
+
+### Netlify
+
+Import the repository in Netlify. The included `netlify.toml` configures
+`npm run build:netlify` and publishes `dist/client` automatically.
+
+### AWS Amplify
+
+Connect the repository in AWS Amplify. The included `amplify.yml` runs
+`npm run build:aws` and publishes `dist/client`.
+
+For S3 + CloudFront, run `npm run build:aws`, upload the contents of
+`dist/client` to the bucket, and configure `index.html` as the index and error
+document.
 
 ## Learn More
 

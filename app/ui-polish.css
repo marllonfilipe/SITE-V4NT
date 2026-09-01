@@ -155,6 +155,11 @@
   border-radius: var(--ui-radius-small);
 }
 
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
 @media (max-width: 680px) {
   .button {
     min-height: 54px;

@@ -294,6 +294,38 @@
   font-weight: 650;
 }
 
+.case-client-logo {
+  display: flex;
+  min-height: 2.4rem;
+  align-items: center;
+  margin-top: .7rem;
+}
+
+.case-client-logo img {
+  display: block;
+  width: auto;
+  max-width: 9rem;
+  max-height: 2.6rem;
+  object-fit: contain;
+}
+
+.case-client-logo-text {
+  color: #17191d;
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -.08em;
+  line-height: .9;
+}
+
+.case-client-logo-dm2 img {
+  max-width: 12rem;
+  max-height: 3.3rem;
+}
+
+.case-client-logo-presto img {
+  filter: invert(1);
+}
+
 .case-feature-index {
   color: #a2a7a1;
   font-size: .7rem;
@@ -410,8 +442,12 @@
   padding-bottom: 1rem;
 }
 
-.case-support-top .case-client-name {
+.case-support-top .case-client-logo {
+  min-height: 2.2rem;
   margin-top: .45rem;
+}
+
+.case-support-top .case-client-logo-text {
   font-size: clamp(1.8rem, 2.7vw, 2.7rem);
 }
 

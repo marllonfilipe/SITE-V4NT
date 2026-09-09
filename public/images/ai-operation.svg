@@ -1,0 +1,74 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11171C"/>
+      <stop offset="1" stop-color="#070A0D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="480" y1="220" x2="1200" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB000"/>
+      <stop offset="1" stop-color="#FF5A00"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#242C33"/>
+      <stop offset="1" stop-color="#14191E"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#background)"/>
+  <g opacity=".16" stroke="#A7B1BB">
+    <path d="M0 160H1600M0 320H1600M0 480H1600M0 640H1600M0 800H1600"/>
+    <path d="M160 0V1000M320 0V1000M480 0V1000M640 0V1000M800 0V1000M960 0V1000M1120 0V1000M1280 0V1000M1440 0V1000"/>
+  </g>
+  <g opacity=".55" stroke="#FF7A00" stroke-width="2" stroke-dasharray="8 14">
+    <path d="M190 300C410 300 410 370 610 440"/>
+    <path d="M190 500C390 500 430 500 610 500"/>
+    <path d="M190 700C410 700 430 620 610 560"/>
+    <path d="M990 440C1190 370 1180 300 1410 300"/>
+    <path d="M990 500H1410"/>
+    <path d="M990 560C1190 620 1180 700 1410 700"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="100" y="220" width="300" height="160" rx="18" fill="url(#panel)" stroke="#3B454E"/>
+    <rect x="100" y="420" width="300" height="160" rx="18" fill="url(#panel)" stroke="#3B454E"/>
+    <rect x="100" y="620" width="300" height="160" rx="18" fill="url(#panel)" stroke="#3B454E"/>
+    <rect x="1200" y="220" width="300" height="160" rx="18" fill="url(#panel)" stroke="#3B454E"/>
+    <rect x="1200" y="420" width="300" height="160" rx="18" fill="url(#panel)" stroke="#3B454E"/>
+    <rect x="1200" y="620" width="300" height="160" rx="18" fill="url(#panel)" stroke="#3B454E"/>
+  </g>
+  <g fill="#89949F" font-family="Arial, sans-serif">
+    <text x="150" y="275" font-size="18" letter-spacing="3">ENTRADAS</text>
+    <text x="150" y="325" font-size="30" fill="#F4F5F4">Dados comerciais</text>
+    <text x="150" y="475" font-size="18" letter-spacing="3">CONTEXTO</text>
+    <text x="150" y="525" font-size="30" fill="#F4F5F4">CRM e pipeline</text>
+    <text x="150" y="675" font-size="18" letter-spacing="3">ROTINA</text>
+    <text x="150" y="725" font-size="30" fill="#F4F5F4">Tarefas manuais</text>
+    <text x="1250" y="275" font-size="18" letter-spacing="3">PRIORIDADE</text>
+    <text x="1250" y="325" font-size="30" fill="#F4F5F4">Leads classificados</text>
+    <text x="1250" y="475" font-size="18" letter-spacing="3">EXECUÇÃO</text>
+    <text x="1250" y="525" font-size="30" fill="#F4F5F4">Follow-ups</text>
+    <text x="1250" y="675" font-size="18" letter-spacing="3">EVOLUÇÃO</text>
+    <text x="1250" y="725" font-size="30" fill="#F4F5F4">Time mais capaz</text>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="800" cy="500" r="215" fill="#FF7A00" fill-opacity=".08"/>
+    <circle cx="800" cy="500" r="155" fill="#171D23" stroke="url(#accent)" stroke-width="5"/>
+  </g>
+  <circle cx="800" cy="500" r="112" fill="#0B0F13" stroke="#53606B"/>
+  <path d="M800 415V585M715 500H885M740 440L860 560M860 440L740 560" stroke="#FFB000" stroke-width="3" opacity=".65"/>
+  <circle cx="800" cy="500" r="42" fill="url(#accent)"/>
+  <path d="M800 477L817 500L800 523L783 500L800 477Z" fill="#12171B"/>
+  <g fill="#F4F5F4" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="800" y="685" font-size="22" letter-spacing="5">IA APLICADA</text>
+    <text x="800" y="730" font-size="38" font-weight="700">VANT</text>
+  </g>
+  <g fill="#FFB000">
+    <circle cx="610" cy="440" r="6"/><circle cx="610" cy="500" r="6"/><circle cx="610" cy="560" r="6"/>
+    <circle cx="990" cy="440" r="6"/><circle cx="990" cy="500" r="6"/><circle cx="990" cy="560" r="6"/>
+  </g>
+</svg>

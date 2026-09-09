@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { BrowserTitle } from "./components/BrowserTitle";
+import { InitialScrollGuard } from "./components/InitialScrollGuard";
 import "./globals.css";
 import "./responsive.css";
 import "./cases.css";
@@ -8,6 +9,7 @@ import "./testimonials.css";
 import "./diagnostic.css";
 import "./linkedin.css";
 import "./ui-polish.css";
+import "./ai.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
@@ -22,5 +24,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body className={`${inter.variable} antialiased`}><BrowserTitle />{children}</body></html>;
+  return <html lang="pt-BR"><body className={`${inter.variable} antialiased`}><BrowserTitle /><InitialScrollGuard />{children}</body></html>;
 }

@@ -223,7 +223,7 @@ export function DiagnosticExperience() {
       `Diagnóstico rápido: ${recommendation.product} — ${recommendation.description}`,
     ].join("\n");
     setSubmitted(true);
-    window.location.href = `mailto:contato@v4nt.com.br?subject=${encodeURIComponent("Quero diagnosticar minha operação")}&body=${encodeURIComponent(body)}`;
+    window.location.href = `https://wa.me/5533988382208?text=${encodeURIComponent(`Olá, VANT. Quero diagnosticar minha operação.\n\n${body}`)}`;
   };
 
   return <>
@@ -245,8 +245,8 @@ export function DiagnosticExperience() {
             <label className="lead-form-full">O que está acontecendo na operação?<textarea name="context" rows={4} placeholder="Conte brevemente sobre o gargalo, processo ou prioridade atual." /></label>
           </div>
           <div className="lead-form-diagnostic"><span>LEITURA INICIAL</span><p>{recommendation.product} · {recommendation.eyebrow}</p></div>
-          <button className="button" type="submit">Receber recomendação da VANT <span className="arrow" aria-hidden="true">→︎</span></button>
-          {submitted && <small className="lead-form-success">Seu pedido foi preparado para envio por e-mail.</small>}
+          <button className="button" type="submit">Enviar diagnóstico pelo WhatsApp <span className="arrow" aria-hidden="true">→︎</span></button>
+          {submitted && <small className="lead-form-success">Seu diagnóstico foi preparado para envio pelo WhatsApp.</small>}
         </form>
       </div>
     </section>

@@ -351,23 +351,23 @@
   position: relative;
   min-height: 18rem;
   padding: clamp(1.5rem, 2.5vw, 2rem);
-  border: 1px solid #2b2f35;
-  background: #0f1114;
-  color: #f7f8fa;
-  box-shadow: none;
+  border: 1px solid #dfe1e4;
+  background: #fff;
+  color: #17191d;
+  box-shadow: 0 1.25rem 3rem rgba(24, 28, 31, .09);
   font-family: var(--font-inter), Inter, Arial, sans-serif;
 }
 
 .linkedin-card:hover {
-  border-color: #424750;
-  background: #17191d;
-  box-shadow: 0 16px 42px rgba(0, 0, 0, .34);
+  border-color: rgba(255, 122, 0, .62);
+  background: #fff;
+  box-shadow: 0 1.5rem 3.5rem rgba(24, 28, 31, .16);
   transform: translateY(-3px);
 }
 
 .linkedin-card-featured {
   border-top: 3px solid var(--orange);
-  background: linear-gradient(145deg, #202022, #111214);
+  background: linear-gradient(145deg, #fff, #faf8f3);
 }
 
 .linkedin-card-top {
@@ -379,40 +379,40 @@
 }
 
 .linkedin-card-top i {
-  color: #777e87;
+  color: #9a9e9b;
 }
 
 .linkedin-card h3 {
   margin: 0 0 1rem;
-  color: #fff;
+  color: #17191d;
   font-size: clamp(1.35rem, 1.9vw, 1.7rem);
   line-height: 1.08;
 }
 
 .linkedin-card p {
   margin-bottom: 1.25rem;
-  color: #a6acb5;
+  color: #62676b;
   font-size: .86rem;
   line-height: 1.6;
 }
 
 .linkedin-card small {
-  color: #8d949d;
+  color: #7a807d;
   font-size: .68rem;
   letter-spacing: .06em;
   text-transform: uppercase;
 }
 
 .linkedin-offer {
-  border-top-color: #2b2f35;
+  border-top-color: #e2e3df;
 }
 
 .linkedin-offer strong {
-  color: #a6acb5;
+  color: #62676b;
 }
 
 .linkedin-offer span {
-  color: #fff;
+  color: #17191d;
 }
 
 .linkedin-card a {
@@ -434,19 +434,20 @@
 }
 
 .linkedin-pillar {
-  border-color: #2b2f35;
+  border-color: #dfe1e4;
   border-radius: var(--ui-radius);
-  background: #0f1114;
-  color: #f7f8fa;
+  background: #fff;
+  color: #17191d;
+  box-shadow: 0 1rem 2.5rem rgba(24, 28, 31, .06);
 }
 
 .linkedin-pillar h4 {
-  color: #fff;
+  color: #17191d;
   font-size: .78rem;
 }
 
 .linkedin-pillar p {
-  color: #a6acb5;
+  color: #62676b;
 }
 
 @media (max-width: 680px) {

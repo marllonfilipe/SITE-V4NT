@@ -294,7 +294,7 @@ h1,h2{letter-spacing:-.045em;line-height:1.04}.section-heading h2{font-size:clam
 @media(max-width:1000px){.score-product::before{top:-2rem}}
 @media(max-width:680px){
   .score-product::before{position:static;display:block;margin-bottom:1rem;line-height:1.5;white-space:normal}
-  .mobile-sticky-cta{position:fixed;right:16px;bottom:14px;left:16px;z-index:45;display:flex;min-height:52px;align-items:center;justify-content:space-between;padding:0 18px;border-radius:5px;background:linear-gradient(135deg,var(--amber),var(--flame));box-shadow:0 12px 32px rgba(9,10,12,.36);color:#090a0c;font-size:12px;font-weight:800}
+  .mobile-sticky-cta{position:fixed;right:16px;bottom:14px;left:16px;z-index:45;display:flex;min-height:52px;align-items:center;justify-content:space-between;padding:0 18px;border-radius:5px;background:linear-gradient(135deg,var(--amber),var(--flame));box-shadow:0 12px 32px rgba(9,10,12,.36);color:#fff;font-size:12px;font-weight:800}
   .mobile-sticky-cta .arrow{color:#fff;font-size:18px}
   .footer{padding-bottom:74px}
 }

@@ -1,9 +1,9 @@
 import { Reveal } from "./Reveal";
 
 const capabilities = [
-  ["01", "Revenue Intelligence", "Transforma dados comerciais em inteligência para identificar gargalos, analisar o pipeline, priorizar oportunidades e orientar decisões."],
-  ["02", "AI Agents", "Apoia pesquisa de empresas, qualificação de leads, preparação de reuniões e follow-ups contextualizados."],
-  ["03", "Automation Engine", "Conecta ferramentas, processos e canais para automatizar tarefas, movimentações comerciais, notificações e fluxos operacionais."],
+  ["01", "Revenue Intelligence", "Interpreta dados comerciais, evidencia gargalos e organiza recomendações para priorizar oportunidades."],
+  ["02", "AI Agents", "Apoiam pesquisa, qualificação, preparação de reuniões e follow-ups a partir do contexto da operação."],
+  ["03", "Automation Engine", "Conecta processos e ferramentas para transformar decisões em tarefas, notificações e fluxos operacionais."],
 ];
 
 export function PlatformSection() {
@@ -12,9 +12,9 @@ export function PlatformSection() {
       <Reveal className="section-heading horizontal platform-heading">
         <div>
           <span className="kicker">VANT PLATFORM</span>
-          <h2>Inteligência comercial para transformar dados em <span>crescimento.</span></h2>
+          <h2>Inteligência comercial que transforma dados em decisões e decisões em <span>execução.</span></h2>
         </div>
-        <p>Uma plataforma de inteligência comercial que conecta análise, inteligência artificial e automação para ajudar empresas a identificar oportunidades, tomar decisões melhores e executar operações comerciais com mais eficiência.</p>
+        <p>A VANT Platform conecta Revenue Intelligence, AI Agents e Automation Engine para interpretar a operação comercial, identificar oportunidades e apoiar a execução dos próximos passos.</p>
       </Reveal>
 
       <Reveal className="platform-interface">
@@ -31,8 +31,8 @@ export function PlatformSection() {
       </div>
 
       <Reveal className="platform-close">
-        <strong>Da informação à decisão. Da decisão à execução.</strong>
-        <span>A VANT Platform conecta inteligência, pessoas e processos em uma operação comercial integrada.</span>
+        <strong>Não basta saber o que acontece na operação. É preciso saber o que fazer a seguir e transformar essa decisão em execução.</strong>
+        <span>Inteligência comercial conectada à operação, com continuidade entre análise, ação e acompanhamento.</span>
       </Reveal>
 
       <Reveal className="platform-cta-wrap"><a className="button" href="#diagnostico">Conhecer a VANT Platform <span className="arrow" aria-hidden="true">→︎</span></a></Reveal>

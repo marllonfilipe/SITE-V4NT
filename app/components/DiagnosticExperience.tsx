@@ -193,6 +193,7 @@ export function DiagnosticExperience() {
   const currentQuestion = questions[step] ?? questions[0];
   const selectedValue = answers[currentQuestion.id];
   const isResult = step === questions.length;
+  const hasDiagnosticAnswers = Object.keys(answers).length > 0;
 
   const selectAnswer = (value: string) => {
     setAnswers(current => ({ ...current, [currentQuestion.id]: value }));
@@ -244,7 +245,7 @@ export function DiagnosticExperience() {
             <label>Cargo<input name="role" placeholder="Seu cargo" /></label>
             <label className="lead-form-full">O que está acontecendo na operação?<textarea name="context" rows={4} placeholder="Conte brevemente sobre o gargalo, processo ou prioridade atual." /></label>
           </div>
-          <div className="lead-form-diagnostic"><span>LEITURA INICIAL</span><p>{recommendation.product} · {recommendation.eyebrow}</p></div>
+          <div className="lead-form-diagnostic"><span>LEITURA INICIAL</span><p>{hasDiagnosticAnswers ? `${recommendation.product} · ${recommendation.eyebrow}` : "Identificação do gargalo prioritário"}</p></div>
           <button className="button" type="submit">Enviar diagnóstico pelo WhatsApp <span className="arrow" aria-hidden="true">→︎</span></button>
           {submitted && <small className="lead-form-success">Seu diagnóstico foi preparado para envio pelo WhatsApp.</small>}
         </form>
@@ -268,10 +269,11 @@ export function DiagnosticExperience() {
           <h2 id="diagnostic-title">A prioridade inicial parece ser <span>{recommendation.product}.</span></h2>
           <p>{recommendation.description}</p>
           <div className="diagnostic-next"><small>PRÓXIMO PASSO</small><strong>{recommendation.nextStep}</strong></div>
-          <p className="diagnostic-disclaimer">Esta é uma indicação inicial baseada nas suas respostas. O VANT Score confirma o gargalo e define a prioridade de implementação.</p>
+           <p className="diagnostic-disclaimer">Esta é uma indicação inicial baseada nas suas respostas. Se você ainda não conhece o gargalo, o VANT Score ajuda a confirmar prioridades; se já conhece, você pode avançar diretamente para a solução indicada.</p>
           <button className="button" type="button" onClick={scrollToForm}>Preencher formulário <span className="arrow" aria-hidden="true">→︎</span></button>
         </div>}
       </div>
     </div>}
   </>;
 }
+

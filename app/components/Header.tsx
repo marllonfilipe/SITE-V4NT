@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const links = [["Soluções", "#solucoes"], ["Como funciona", "#metodo"], ["VANT Score", "#score"], ["Cases", "#cases"], ["Sobre", "#sobre"]];
+const links = [["Soluções", "#solucoes"], ["VANT Platform", "#platform"], ["Como funciona", "#metodo"], ["VANT Score", "#score"], ["Cases", "#cases"], ["Sobre", "#sobre"]];
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -33,3 +33,4 @@ export function Header() {
   <a className="mobile-sticky-cta" href="#diagnostico">Diagnosticar minha operação <span className="arrow" aria-hidden="true">→︎</span></a>
   </>;
 }
+

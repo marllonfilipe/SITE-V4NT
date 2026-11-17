@@ -10,6 +10,7 @@ import "./diagnostic.css";
 import "./linkedin.css";
 import "./ui-polish.css";
 import "./ai.css";
+import "./platform.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
@@ -26,3 +27,4 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="pt-BR"><body className={`${inter.variable} antialiased`}><BrowserTitle /><InitialScrollGuard />{children}</body></html>;
 }
+

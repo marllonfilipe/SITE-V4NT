@@ -1,0 +1,226 @@
+.platform-section {
+  position: relative;
+  overflow: hidden;
+  background: #090a0c;
+}
+
+.platform-section::before {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 78% 20%, rgba(255, 122, 0, .12), transparent 34%), linear-gradient(135deg, rgba(255, 255, 255, .025), transparent 42%);
+  content: "";
+  pointer-events: none;
+}
+
+.platform-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.platform-heading {
+  align-items: end;
+}
+
+.platform-heading h2 {
+  max-width: 760px;
+}
+
+.platform-heading > p {
+  color: #a6acb5;
+}
+
+.platform-interface {
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+  border: 1px solid #30343a;
+  background: #101216;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .34), 0 0 0 1px rgba(255, 122, 0, .08);
+}
+
+.platform-interface::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(9, 10, 12, .16), transparent 38%, rgba(255, 122, 0, .08));
+  content: "";
+  pointer-events: none;
+}
+
+.platform-interface-bar {
+  display: flex;
+  min-height: 2.7rem;
+  align-items: center;
+  gap: .45rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid #2b2f35;
+  background: #15171b;
+}
+
+.platform-interface-bar > span {
+  width: .45rem;
+  height: .45rem;
+  border-radius: 50%;
+  background: #545b63;
+}
+
+.platform-interface-bar > span:first-child {
+  background: var(--orange);
+}
+
+.platform-interface-bar strong {
+  margin-left: .8rem;
+  color: #f7f8fa;
+  font-size: .65rem;
+  letter-spacing: .14em;
+}
+
+.platform-interface-bar small {
+  margin-left: auto;
+  color: #7d858f;
+  font-size: .58rem;
+  letter-spacing: .13em;
+}
+
+.platform-interface img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  opacity: .94;
+}
+
+.platform-capabilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.platform-capability {
+  min-height: 14rem;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  border: 1px solid #2b2f35;
+  background: #111316;
+  transition: border-color .25s ease, background .25s ease, transform .25s ease;
+}
+
+.platform-capability:hover {
+  border-color: rgba(255, 122, 0, .6);
+  background: #17191d;
+  transform: translateY(-3px);
+}
+
+.platform-capability-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.2rem;
+}
+
+.platform-capability-top span {
+  color: var(--orange);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+}
+
+.platform-capability-top i {
+  color: #777e87;
+  font-size: 1.1rem;
+  font-style: normal;
+}
+
+.platform-capability h3 {
+  margin: 0 0 .8rem;
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: -.035em;
+}
+
+.platform-capability p {
+  margin: 0;
+  color: #a6acb5;
+  font-size: .84rem;
+  line-height: 1.65;
+}
+
+.platform-close {
+  display: grid;
+  gap: .55rem;
+  max-width: 58rem;
+  margin: clamp(3rem, 6vw, 5rem) auto 0;
+  padding-left: 1.3rem;
+  border-left: 2px solid var(--orange);
+}
+
+.platform-close strong {
+  color: #fff;
+  font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+  letter-spacing: -.035em;
+}
+
+.platform-close span {
+  color: #a6acb5;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.platform-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .platform-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-capability {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .platform-heading {
+    gap: 1.25rem;
+  }
+
+  .platform-interface {
+    margin-top: 2rem;
+  }
+
+  .platform-interface-bar {
+    min-height: 2.35rem;
+    padding: 0 .75rem;
+  }
+
+  .platform-interface-bar strong {
+    margin-left: .45rem;
+    font-size: .55rem;
+  }
+
+  .platform-interface-bar small {
+    font-size: .48rem;
+  }
+
+  .platform-interface img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .platform-capability-top {
+    margin-bottom: 1.5rem;
+  }
+
+  .platform-close {
+    padding-left: 1rem;
+  }
+
+  .platform-cta-wrap .button {
+    width: 100%;
+  }
+}
+

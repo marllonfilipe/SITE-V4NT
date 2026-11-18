@@ -9,11 +9,9 @@ const capabilities = [
 export function PlatformSection() {
   return <section id="platform" className="section-dark section-pad platform-section">
     <div className="container">
-      <Reveal className="section-heading horizontal platform-heading">
-        <div>
-          <span className="kicker">VANT PLATFORM</span>
-          <h2>Inteligência comercial que transforma dados em decisões e decisões em <span>execução.</span></h2>
-        </div>
+      <Reveal className="section-heading centered platform-heading">
+        <span className="kicker">VANT PLATFORM</span>
+        <h2>Inteligência comercial que transforma dados em decisões e decisões em <span>execução.</span></h2>
         <p>A VANT Platform conecta Revenue Intelligence, AI Agents e Automation Engine para interpretar a operação comercial, identificar oportunidades e apoiar a execução dos próximos passos.</p>
       </Reveal>
 

@@ -509,3 +509,43 @@
     transform: none;
   }
 }
+
+/* Enquadramento compacto da abertura do formulário */
+.lead-form-layout {
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+.lead-form-copy {
+  width: min(100%, 48rem);
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-form-copy h2 {
+  margin: .85rem 0 .7rem;
+  font-size: clamp(1.65rem, 2.6vw, 2.45rem);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+
+.lead-form-copy > p {
+  max-width: 38rem;
+  margin: 0 auto;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.lead-form-note {
+  display: inline-flex;
+  margin-top: 1.15rem;
+  padding: .7rem 1rem;
+  text-align: left;
+}
+
+.lead-form {
+  width: min(100%, 58rem);
+  margin: 0 auto;
+}
+

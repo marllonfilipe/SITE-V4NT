@@ -549,3 +549,11 @@
   margin: 0 auto;
 }
 
+.lead-form > .button,
+.lead-form > .button:visited,
+.lead-form > .button:hover,
+.lead-form > .button:active,
+.lead-form > .button .arrow {
+  color: #fff;
+}
+

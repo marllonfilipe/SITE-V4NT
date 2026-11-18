@@ -193,7 +193,6 @@ export function DiagnosticExperience() {
   const currentQuestion = questions[step] ?? questions[0];
   const selectedValue = answers[currentQuestion.id];
   const isResult = step === questions.length;
-  const hasDiagnosticAnswers = Object.keys(answers).length > 0;
 
   const selectAnswer = (value: string) => {
     setAnswers(current => ({ ...current, [currentQuestion.id]: value }));
@@ -232,9 +231,8 @@ export function DiagnosticExperience() {
       <div className="container lead-form-layout">
         <div className="lead-form-copy">
           <span className="kicker dark">PRÓXIMO PASSO</span>
-          <h2>Transforme a leitura inicial em uma <span>prioridade clara.</span></h2>
-          <p>Compartilhe seus dados e o contexto da operação. A VANT usa o diagnóstico para indicar o próximo passo com mais precisão.</p>
-          <div className="lead-form-note"><strong>VANT Score</strong><span>Diagnóstico da operação · Plano priorizado · 7–14 dias</span></div>
+          <h2>Descubra o gargalo. Defina a prioridade. <span>Implemente o próximo passo.</span></h2>
+          <p>Compartilhe o contexto da sua operação. A VANT identifica o ponto prioritário e indica a frente de implementação mais adequada.</p>
         </div>
         <form className="lead-form" onSubmit={handleFormSubmit}>
           <div className="lead-form-fields">
@@ -245,7 +243,6 @@ export function DiagnosticExperience() {
             <label>Cargo<input name="role" placeholder="Seu cargo" /></label>
             <label className="lead-form-full">O que está acontecendo na operação?<textarea name="context" rows={4} placeholder="Conte brevemente sobre o gargalo, processo ou prioridade atual." /></label>
           </div>
-          <div className="lead-form-diagnostic"><span>LEITURA INICIAL</span><p>{hasDiagnosticAnswers ? `${recommendation.product} · ${recommendation.eyebrow}` : "Identificação do gargalo prioritário"}</p></div>
           <button className="button" type="submit">Enviar diagnóstico pelo WhatsApp <span className="arrow" aria-hidden="true">→︎</span></button>
           {submitted && <small className="lead-form-success">Seu diagnóstico foi preparado para envio pelo WhatsApp.</small>}
         </form>

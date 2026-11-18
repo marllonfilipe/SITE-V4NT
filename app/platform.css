@@ -18,15 +18,30 @@
 }
 
 .platform-heading {
-  align-items: end;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 50rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .platform-heading h2 {
   max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  line-height: 1.08;
 }
 
 .platform-heading > p {
+  max-width: 38rem;
+  margin-right: auto;
+  margin-left: auto;
   color: #a6acb5;
+  font-size: .9rem;
+  line-height: 1.55;
 }
 
 .platform-interface {
@@ -191,6 +206,14 @@
     gap: 1.25rem;
   }
 
+  .platform-heading h2 {
+    font-size: clamp(1.7rem, 7.5vw, 2.2rem);
+  }
+
+  .platform-heading > p {
+    font-size: .84rem;
+  }
+
   .platform-interface {
     margin-top: 2rem;
     width: 100%;
@@ -248,7 +271,7 @@
   }
 
   .platform-interface {
-    width: min(100%, 920px);
+    width: min(100%, 820px);
     margin-top: 2rem;
   }
 

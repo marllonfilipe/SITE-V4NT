@@ -229,3 +229,40 @@
   }
 }
 
+@media (min-width: 1001px) {
+  .platform-section {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+
+  .platform-heading h2 {
+    max-width: 650px;
+    font-size: clamp(30px, 3vw, 44px);
+    line-height: 1.08;
+  }
+
+  .platform-heading > p {
+    max-width: 390px;
+    font-size: .86rem;
+    line-height: 1.55;
+  }
+
+  .platform-interface {
+    width: min(100%, 920px);
+    margin-top: 2rem;
+  }
+
+  .platform-capability {
+    min-height: 12rem;
+    padding: 1.35rem;
+  }
+
+  .platform-capability-top {
+    margin-bottom: 1.55rem;
+  }
+
+  .platform-close {
+    margin-top: 2.75rem;
+  }
+}
+

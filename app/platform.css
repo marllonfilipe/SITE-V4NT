@@ -32,7 +32,10 @@
 .platform-interface {
   position: relative;
   overflow: hidden;
+  width: min(100%, 1120px);
   margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
   border: 1px solid #30343a;
   background: #101216;
   box-shadow: 0 28px 80px rgba(0, 0, 0, .34), 0 0 0 1px rgba(255, 122, 0, .08);
@@ -85,8 +88,9 @@
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: #101216;
   opacity: .94;
 }
 
@@ -189,6 +193,7 @@
 
   .platform-interface {
     margin-top: 2rem;
+    width: 100%;
   }
 
   .platform-interface-bar {
@@ -206,9 +211,9 @@
   }
 
   .platform-interface img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: left center;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
   }
 
   .platform-capability-top {

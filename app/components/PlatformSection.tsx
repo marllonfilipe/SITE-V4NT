@@ -28,11 +28,6 @@ export function PlatformSection() {
         </Reveal>)}
       </div>
 
-      <Reveal className="platform-close">
-        <strong>Não basta saber o que acontece na operação. É preciso saber o que fazer a seguir e transformar essa decisão em execução.</strong>
-        <span>Inteligência comercial conectada à operação, com continuidade entre análise, ação e acompanhamento.</span>
-      </Reveal>
-
       <Reveal className="platform-cta-wrap"><a className="button" href="#diagnostico">Conhecer a VANT Platform <span className="arrow" aria-hidden="true">→︎</span></a></Reveal>
     </div>
   </section>;

@@ -8,9 +8,10 @@
   "theme_color": "#071014",
   "icons": [
     {
-      "src": "/images/vant-symbol.webp",
+      "src": "/images/vant-favicon.png",
       "sizes": "512x512",
-      "type": "image/webp"
+      "type": "image/png"
     }
   ]
 }
+

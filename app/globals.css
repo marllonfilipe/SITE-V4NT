@@ -311,3 +311,8 @@ h1,h2{letter-spacing:-.045em;line-height:1.04}.section-heading h2{font-size:clam
   .about .about-image{inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto;top:0;right:0;transform:none;background-size:cover;background-position:center center;background-repeat:no-repeat;opacity:1;-webkit-mask-image:none;mask-image:none}
   .audience:after,.about:after{background:linear-gradient(90deg,#090a0c 0%,rgba(9,10,12,.98) 27%,rgba(9,10,12,.78) 48%,rgba(9,10,12,.2) 74%,transparent 100%)}
 }
+
+.about-cta {
+  margin-top: 1.75rem;
+}
+

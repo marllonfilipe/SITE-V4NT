@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   applicationName: "VANT",
   description: "Estratégia, aquisição, processo, CRM, automação e IA conectados em uma operação comercial mais previsível.",
   openGraph: { title: "VANT | Operações comerciais que funcionam", description: "Transformamos operações fragmentadas em sistemas de crescimento mais previsíveis.", type: "website", locale: "pt_BR" },
-  icons: { icon: "/images/vant-symbol.webp", shortcut: "/images/vant-symbol.webp" },
+  icons: { icon: "/images/vant-favicon.png", shortcut: "/images/vant-favicon.png", apple: "/images/vant-favicon.png" },
   manifest: "/manifest.webmanifest",
 };
 

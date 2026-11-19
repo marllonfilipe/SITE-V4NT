@@ -2,6 +2,7 @@ import { Header } from "./components/Header";
 import { Reveal } from "./components/Reveal";
 import { DiagnosticExperience } from "./components/DiagnosticExperience";
 import { PlatformSection } from "./components/PlatformSection";
+import { Footer } from "./components/Footer";
 
 const Arrow = () => <span className="arrow" aria-hidden="true">→︎</span>;
 const solutions = [
@@ -56,6 +57,6 @@ export default function Home() { return <main>
 
   <DiagnosticExperience />
 
-  <footer className="footer"><div className="container footer-main"><div className="footer-brand"><img src="/images/vant-logo.webp" alt="VANT" loading="lazy" decoding="async"/><p>Growth Tech para operações comerciais funcionais, mensuráveis e escaláveis.</p></div><div><strong>NAVEGUE</strong><a href="#solucoes">Soluções</a><a href="#score">VANT Score</a><a href="#metodo">Método</a><a href="#cases">Cases</a></div><div><strong>EMPRESA</strong><a href="#sobre">Sobre</a><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:contato@v4nt.com.br">Contato</a></div></div><div className="container footer-bottom"><span>© 2026 VANT. Todos os direitos reservados.</span><span>Estratégia · Execução · Tecnologia</span></div></footer>
+  <Footer />
 </main>; }
 

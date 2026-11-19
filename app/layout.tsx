@@ -11,6 +11,7 @@ import "./linkedin.css";
 import "./ui-polish.css";
 import "./ai.css";
 import "./platform.css";
+import "./academy.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 

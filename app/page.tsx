@@ -3,6 +3,7 @@ import { Reveal } from "./components/Reveal";
 import { DiagnosticExperience } from "./components/DiagnosticExperience";
 import { PlatformSection } from "./components/PlatformSection";
 import { Footer } from "./components/Footer";
+import { AcademyLanding } from "./components/AcademyLanding";
 
 const Arrow = () => <span className="arrow" aria-hidden="true">→︎</span>;
 const solutions = [
@@ -22,6 +23,7 @@ const testimonials = [
 
 export default function Home() { return <main>
   <Header />
+  <div className="institutional-content">
   <section id="inicio" className="hero section-dark"><div className="hero-image" aria-hidden="true" /><div className="grid-overlay" aria-hidden="true" /><div className="container hero-content"><div className="hero-copy"><span className="eyebrow"><i /> Growth Tech para operações comerciais</span><h1>Sua empresa não precisa de mais uma ação de marketing.<br/><em>Precisa de uma operação comercial que funcione.</em></h1><p>Sua próxima fase de crescimento começa com uma operação comercial mais inteligente. Estratégia, tecnologia e execução trabalhando juntas para acelerar resultados.</p><div className="button-row"><a className="button" href="#diagnostico">Diagnosticar minha operação <Arrow /></a><a className="button button-ghost" href="#solucoes">Conhecer as soluções</a></div></div><div className="hero-proof"><span>Diagnóstico</span><b /><span>Sprints 7–14 dias</span><b /><span>Implementação</span></div></div><a className="scroll-cue" href="#gargalos"><span>EXPLORE</span><i>↓</i></a></section>
 
   <section id="gargalos" className="section-dark section-pad gargalos"><div className="container"><Reveal className="section-heading wide"><span className="kicker">01 — O SINAL</span><h2>Se o crescimento depende de esforço demais, provavelmente existe um problema na <span>operação.</span></h2><p>O primeiro passo é identificar onde a operação perde oportunidades, tempo e capacidade de execução.</p></Reveal><div className="bottleneck-layout"><Reveal className="bottleneck-visual"><img src="/images/gargalos-operacao.webp" alt="Equipe analisando gargalos da operação comercial" loading="eager" fetchPriority="low" decoding="async" /><div className="signal-card"><strong>07</strong><span>GARGALOS<br/>RECORRENTES</span></div></Reveal><div className="issue-list">{["Poucas oportunidades", "Dependência de indicação", "Processo desorganizado", "CRM subutilizado", "Baixa conversão", "Atividades manuais", "IA sem aplicação prática"].map((item, i) => <Reveal key={item} className="issue"><span>0{i+1}</span><h3>{item}</h3><i>→︎</i></Reveal>)}</div></div></div></section>
@@ -56,6 +58,9 @@ export default function Home() { return <main>
   <section id="sobre" className="section-dark about"><div className="about-image" aria-hidden="true" /><div className="container about-layout"><Reveal className="about-copy"><span className="kicker">10 — SOBRE A VANT</span><h2>Estamos construindo uma nova forma de implementar <span>crescimento comercial.</span></h2><p>A VANT integra estratégia, crescimento comercial e tecnologia para transformar operações B2B.</p><p>Por meio da VANT Growth e da VANT Platform, conecta implementação, inteligência e execução em uma única jornada de crescimento.</p><a className="button about-cta" href="https://wa.me/5533988382208?text=Quero%20saber%20mais%20sobre%20a%20VANT" target="_blank" rel="noreferrer">Saber mais sobre a VANT <Arrow /></a></Reveal></div></section>
 
   <DiagnosticExperience />
+  </div>
+
+  <AcademyLanding />
 
   <Footer />
 </main>; }

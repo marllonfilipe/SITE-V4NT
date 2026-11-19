@@ -606,6 +606,7 @@ document.addEventListener("change",e=>{const i=e.target;
  if(i.id==="fz"){const f=i.files[0];if(!f)return;if(f.size>8e6){toast("Arquivo acima de 8 MB.");i.value="";return}const r=new FileReader();r.onload=()=>{pubFile={fn:f.name,d:r.result,sz:f.size,t:/\.pdf$/i.test(f.name)?"pdf":"doc"};if(!pubTitle)pubTitle=f.name.replace(/\.[^.]+$/,"");admDraw()};r.readAsDataURL(f);return}
  if(i.dataset.a==="price"||/^(bn|bp|bd|cd2|cp2)$/.test(i.id))toast("Valores atualizados")});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(ed)closeEd();const am=$("#apm");if(am)am.hidden=true}});
+if (location.hash === "#cadastro") $("#lswb").click();
 </script>
 </body>
 </html>

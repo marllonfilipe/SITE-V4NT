@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { AcademyAuth } from "../../components/AcademyAuth";
+import { redirect } from "next/navigation";
+import { academyEntry } from "../paths";
 
 export const metadata: Metadata = {
   title: "Entrar | VANT Academy",
@@ -7,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function AcademyLoginPage() {
-  return <AcademyAuth />;
+  redirect(academyEntry);
 }
